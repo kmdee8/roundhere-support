@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Round Here — Support</title>
+  <meta name="description" content="Round Here shows you the best places nearby — rated, open now, sorted your way. Get support and learn more." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #120E08;
+      --card:     rgba(255, 248, 235, 0.07);
+      --border:   rgba(255, 248, 235, 0.08);
+      --brand:    #D4901A;
+      --brand-dim:rgba(212, 144, 26, 0.15);
+      --primary:  #F9F4EB;
+      --secondary:rgba(249, 244, 235, 0.52);
+      --tertiary: rgba(249, 244, 235, 0.34);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Header ── */
+    header {
+      padding: 72px 0 56px;
+      text-align: center;
+    }
+
+    .icon {
+      width: 88px;
+      height: 88px;
+      background: var(--brand-dim);
+      border-radius: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      border: 1px solid rgba(212, 144, 26, 0.25);
+    }
+
+    .icon svg {
+      width: 44px;
+      height: 44px;
+      fill: var(--brand);
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .tagline {
+      font-size: 1.0625rem;
+      color: var(--secondary);
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    /* ── Section ── */
+    section {
+      padding: 16px 0 40px;
+    }
+
+    .section-label {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--tertiary);
+      margin-bottom: 12px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .card + .card {
+      margin-top: 10px;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .card p, .card li {
+      font-size: 0.9375rem;
+      color: var(--secondary);
+      line-height: 1.65;
+    }
+
+    .card ul {
+      padding-left: 18px;
+    }
+
+    .card ul li + li {
+      margin-top: 4px;
+    }
+
+    /* ── FAQ ── */
+    details {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    details[open] { padding-bottom: 16px; }
+
+    summary {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--primary);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--brand);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    details p {
+      margin-top: 12px;
+      font-size: 0.9375rem;
+      color: var(--secondary);
+      line-height: 1.65;
+    }
+
+    /* ── Contact ── */
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--brand);
+      color: #000;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 14px;
+      margin-top: 16px;
+      transition: opacity 0.15s;
+    }
+
+    .contact-link:hover { opacity: 0.88; }
+
+    /* ── Privacy ── */
+    #privacy {
+      padding-top: 24px;
+    }
+
+    #privacy .card p + p {
+      margin-top: 10px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 40px 0 56px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.8125rem;
+      color: var(--tertiary);
+      line-height: 1.7;
+    }
+
+    footer a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 8px 0 40px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <div class="icon">
+      <!-- Navigation arrow icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L2 19.8h.1L12 16l9.9 3.8h.1L12 2z"/>
+      </svg>
+    </div>
+    <h1>Round Here</h1>
+    <p class="tagline">Discover the best places around you — rated, open now, sorted your way.</p>
+  </header>
+
+  <!-- What it does -->
+  <section>
+    <p class="section-label">About</p>
+    <div class="card">
+      <h3>What is Round Here?</h3>
+      <p>Round Here is a place discovery app for iPhone. Open it anywhere and instantly see what's nearby — sorted by distance or rating, filtered to what's open right now.</p>
+    </div>
+    <div class="card">
+      <h3>Smart Alerts</h3>
+      <p>Set an alert for any category — bars, restaurants, museums, hotels. Round Here watches in the background and notifies you when you're nearby and on foot. Set it once, forget about it.</p>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- FAQ -->
+  <section>
+    <p class="section-label">Frequently Asked Questions</p>
+
+    <details>
+      <summary>Why does Round Here need location access?</summary>
+      <p>Location is the core of how Round Here works — it shows you places near your current position. Background location ("Always On") is required only if you use Smart Alerts, so the app can notify you when you're near a place you care about. You can use the Explore tab with "While Using" permission only.</p>
+    </details>
+
+    <details>
+      <summary>How do Smart Alerts work?</summary>
+      <p>You set an alert for a category (e.g. Bar), a radius (e.g. 1 mile), and a speed condition (e.g. walking only). Round Here monitors your location in the background and sends a notification when you're within range and moving slowly enough to stop in. A 30-minute cooldown prevents the same place from alerting twice in quick succession.</p>
+    </details>
+
+    <details>
+      <summary>Can I set a time limit on an alert?</summary>
+      <p>Yes. When setting up an alert, choose a duration: 1 hour, 4 hours, today only, or always on. Alerts with a time limit expire automatically and show as "Expired" in the Alerts tab, where you can renew or remove them.</p>
+    </details>
+
+    <details>
+      <summary>What data does Round Here collect?</summary>
+      <p>Round Here uses your location to find nearby places and trigger alerts. Location data is processed on-device and is not stored on our servers or shared with third parties. Place data is fetched from Google Places API. See the Privacy Policy below for full details.</p>
+    </details>
+
+    <details>
+      <summary>How do I delete my alerts?</summary>
+      <p>Open the Alerts tab, swipe left on any alert or tap the trash icon to delete it. Deleting all alerts will prompt you to downgrade to "While Using" location permission, since background access is no longer needed.</p>
+    </details>
+
+    <details>
+      <summary>The app isn't finding places near me — what should I do?</summary>
+      <p>Check that location permission is set to "While Using" or "Always" in Settings → Privacy & Security → Location Services → Round Here. If the issue persists, try closing and reopening the app, or contact us below.</p>
+    </details>
+  </section>
+
+  <hr />
+
+  <!-- Contact -->
+  <section>
+    <p class="section-label">Support</p>
+    <div class="card">
+      <h3>Get in touch</h3>
+      <p>Have a question, found a bug, or want to suggest a feature? We read every message.</p>
+      <a class="contact-link" href="mailto:support@roundhere.app">
+        Email Support
+      </a>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Privacy Policy -->
+  <section id="privacy">
+    <p class="section-label">Privacy Policy</p>
+    <div class="card">
+      <p><strong style="color:var(--primary)">Last updated: April 2026</strong></p>
+      <p>Round Here ("the app") is operated as an independent app. This policy describes what data is collected and how it is used.</p>
+
+      <p><strong style="color:var(--primary)">Location Data</strong><br/>
+      Round Here uses your device's location to show nearby places and to trigger proximity alerts. Location data is processed on-device. It is not transmitted to our servers, stored, or shared with third parties beyond what is required to query the Google Places API (which receives a coordinate, not your identity).</p>
+
+      <p><strong style="color:var(--primary)">Google Places API</strong><br/>
+      Place search results are powered by the Google Places API. When you search, your approximate location is sent to Google to retrieve nearby places. Google's privacy policy applies to this data: <a href="https://policies.google.com/privacy" style="color:var(--brand)">policies.google.com/privacy</a>.</p>
+
+      <p><strong style="color:var(--primary)">Analytics</strong><br/>
+      The app may collect anonymous usage events (e.g. alert created, search performed) to help improve the product. These events contain no personally identifiable information and no location data.</p>
+
+      <p><strong style="color:var(--primary)">No account required</strong><br/>
+      Round Here does not require you to create an account. No name, email address, or personal details are collected.</p>
+
+      <p><strong style="color:var(--primary)">Data retention</strong><br/>
+      Alert configurations and saved places are stored locally on your device and optionally synced via iCloud if you are signed in. We do not have access to this data.</p>
+
+      <p><strong style="color:var(--primary)">Contact</strong><br/>
+      For privacy questions: <a href="mailto:support@roundhere.app" style="color:var(--brand)">support@roundhere.app</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Round Here · iOS App<br/>
+      <a href="#privacy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="mailto:support@roundhere.app">Contact</a>
+    </p>
+    <p style="margin-top:8px;">© 2026 Round Here. All rights reserved.</p>
+  </footer>
+
+</div>
+</body>
+</html>
