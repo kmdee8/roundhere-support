@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use — Round Here</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #120E08; --card: rgba(255,248,235,0.07); --border: rgba(255,248,235,0.08);
+      --brand: #D4901A; --brand-dim: rgba(212,144,26,0.15);
+      --primary: #F9F4EB; --secondary: rgba(249,244,235,0.52); --tertiary: rgba(249,244,235,0.34);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--primary); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; min-height: 100vh; }
+    .container { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 64px 0 40px; text-align: center; }
+    .icon { width: 72px; height: 72px; background: var(--brand-dim); border-radius: 18px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 1px solid rgba(212,144,26,0.25); }
+    .icon svg { width: 36px; height: 36px; fill: var(--brand); }
+    .back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.875rem; color: var(--brand); text-decoration: none; margin-bottom: 24px; }
+    .back:hover { opacity: 0.8; }
+    h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.04em; margin-bottom: 8px; }
+    .meta { font-size: 0.875rem; color: var(--tertiary); }
+    section { padding: 32px 0; }
+    section + section { border-top: 1px solid var(--border); }
+    h2 { font-size: 0.75rem; font-weight: 600; color: var(--brand); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 16px; }
+    h3 { font-size: 1rem; font-weight: 600; color: var(--primary); margin: 20px 0 6px; }
+    h3:first-child { margin-top: 0; }
+    p { font-size: 0.9375rem; color: var(--secondary); line-height: 1.7; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { opacity: 0.8; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 0.9375rem; color: var(--secondary); line-height: 1.7; margin-bottom: 4px; }
+    footer { padding: 40px 0 56px; text-align: center; border-top: 1px solid var(--border); margin-top: 16px; }
+    footer p { font-size: 0.8125rem; color: var(--tertiary); line-height: 1.7; }
+    footer a { color: var(--brand); }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <a class="back" href="/roundhere-support/">← Round Here Support</a>
+    <div class="icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 19.8h.1L12 16l9.9 3.8h.1L12 2z"/></svg>
+    </div>
+    <h1>Terms of Use</h1>
+    <p class="meta">Last updated: April 2026</p>
+  </header>
+
+  <section>
+    <h2>Agreement</h2>
+    <p>By downloading or using Round Here ("the app"), you agree to these Terms of Use. If you do not agree, please do not use the app.</p>
+  </section>
+
+  <section>
+    <h2>Use of the App</h2>
+    <p>Round Here is a place discovery app for personal, non-commercial use. You may not:</p>
+    <ul>
+      <li>Use the app to scrape, harvest, or systematically collect place data</li>
+      <li>Reverse-engineer, decompile, or attempt to extract the source code</li>
+      <li>Use the app in any way that violates applicable laws or regulations</li>
+      <li>Attempt to interfere with or disrupt the app or its backend services</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Round Here+ Subscription</h2>
+    <h3>Billing</h3>
+    <p>Round Here+ is available as a monthly or yearly auto-renewing subscription, purchased through the Apple App Store. Payment is charged to your Apple ID at confirmation of purchase. Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period.</p>
+    <h3>Free Trial</h3>
+    <p>A free trial may be offered for new subscribers. If you do not cancel before the trial ends, you will be charged the subscription price. Only one free trial per Apple ID.</p>
+    <h3>Cancellation &amp; Refunds</h3>
+    <p>You can cancel your subscription at any time via Settings → Apple ID → Subscriptions. Cancellation takes effect at the end of the current billing period. Refunds are handled by Apple in accordance with their App Store refund policy.</p>
+    <h3>Price Changes</h3>
+    <p>We reserve the right to change subscription pricing. You will be notified of any price changes before they take effect, in accordance with Apple's guidelines.</p>
+  </section>
+
+  <section>
+    <h2>Third-Party Services</h2>
+    <p>Round Here uses the following third-party services. Their respective terms and privacy policies apply to your use of those services:</p>
+    <ul>
+      <li><strong style="color:var(--primary)">Google Places API</strong> — provides place data, photos, and reviews</li>
+      <li><strong style="color:var(--primary)">Apple MapKit</strong> — provides map and directions functionality</li>
+      <li><strong style="color:var(--primary)">PostHog</strong> — anonymous usage analytics (opt-out available in Settings)</li>
+      <li><strong style="color:var(--primary)">Cloudflare / Claude AI</strong> — powers AI Search for Round Here+ subscribers</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Disclaimer of Warranties</h2>
+    <p>Round Here is provided "as is" without warranties of any kind. Place data (hours, availability, ratings) is sourced from third parties and may not always be accurate or up to date. We are not responsible for decisions made based on information shown in the app.</p>
+    <p>Location-based features depend on your device's GPS and may not function correctly in all environments.</p>
+  </section>
+
+  <section>
+    <h2>Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, Round Here and its developer shall not be liable for any indirect, incidental, or consequential damages arising from your use of the app, including but not limited to reliance on place information or proximity alerts.</p>
+  </section>
+
+  <section>
+    <h2>Intellectual Property</h2>
+    <p>All content, design, and code within the Round Here app is the property of its developer and is protected by applicable intellectual property laws. Place data is owned by the respective third-party providers.</p>
+  </section>
+
+  <section>
+    <h2>Changes to These Terms</h2>
+    <p>We may update these terms as the app evolves. The "Last updated" date at the top reflects the most recent revision. Continued use of the app after changes constitutes acceptance of the updated terms.</p>
+  </section>
+
+  <section>
+    <h2>Governing Law</h2>
+    <p>These terms are governed by the laws of England and Wales. Any disputes shall be resolved in the courts of England and Wales.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about these terms: <a href="mailto:dinusappleid@gmail.com">dinusappleid@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>
+      <a href="/roundhere-support/">Round Here Support</a> &nbsp;·&nbsp;
+      <a href="/roundhere-support/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="mailto:dinusappleid@gmail.com">Contact</a>
+    </p>
+    <p style="margin-top:8px;">© 2026 Round Here. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+</html>
