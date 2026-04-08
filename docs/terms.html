@@ -14,11 +14,12 @@
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--primary); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; min-height: 100vh; }
     .container { max-width: 640px; margin: 0 auto; padding: 0 24px; }
-    header { padding: 64px 0 40px; text-align: center; }
+    nav { padding: 24px 0 0; }
+    .back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.875rem; color: var(--brand); text-decoration: none; }
+    .back:hover { opacity: 0.8; }
+    header { padding: 32px 0 40px; text-align: center; }
     .icon { width: 72px; height: 72px; background: var(--brand-dim); border-radius: 18px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 1px solid rgba(212,144,26,0.25); }
     .icon svg { width: 36px; height: 36px; fill: var(--brand); }
-    .back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.875rem; color: var(--brand); text-decoration: none; margin-bottom: 24px; }
-    .back:hover { opacity: 0.8; }
     h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.04em; margin-bottom: 8px; }
     .meta { font-size: 0.875rem; color: var(--tertiary); }
     section { padding: 32px 0; }
@@ -39,8 +40,8 @@
 </head>
 <body>
 <div class="container">
+  <nav><a class="back" href="/roundhere-support/">← Round Here Support</a></nav>
   <header>
-    <a class="back" href="/roundhere-support/">← Round Here Support</a>
     <div class="icon">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 19.8h.1L12 16l9.9 3.8h.1L12 2z"/></svg>
     </div>
