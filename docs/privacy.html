@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Round Here</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #120E08; --card: rgba(255,248,235,0.07); --border: rgba(255,248,235,0.08);
+      --brand: #D4901A; --brand-dim: rgba(212,144,26,0.15);
+      --primary: #F9F4EB; --secondary: rgba(249,244,235,0.52); --tertiary: rgba(249,244,235,0.34);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--primary); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; min-height: 100vh; }
+    .container { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 64px 0 40px; text-align: center; }
+    .icon { width: 72px; height: 72px; background: var(--brand-dim); border-radius: 18px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 20px; border: 1px solid rgba(212,144,26,0.25); }
+    .icon svg { width: 36px; height: 36px; fill: var(--brand); }
+    .back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.875rem; color: var(--brand); text-decoration: none; margin-bottom: 24px; }
+    .back:hover { opacity: 0.8; }
+    h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.04em; margin-bottom: 8px; }
+    .meta { font-size: 0.875rem; color: var(--tertiary); }
+    section { padding: 32px 0; }
+    section + section { border-top: 1px solid var(--border); }
+    h2 { font-size: 1rem; font-weight: 600; color: var(--brand); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; margin-bottom: 16px; }
+    h3 { font-size: 1rem; font-weight: 600; color: var(--primary); margin: 20px 0 6px; }
+    h3:first-child { margin-top: 0; }
+    p { font-size: 0.9375rem; color: var(--secondary); line-height: 1.7; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { opacity: 0.8; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 0.9375rem; color: var(--secondary); line-height: 1.7; margin-bottom: 4px; }
+    footer { padding: 40px 0 56px; text-align: center; border-top: 1px solid var(--border); margin-top: 16px; }
+    footer p { font-size: 0.8125rem; color: var(--tertiary); line-height: 1.7; }
+    footer a { color: var(--brand); }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <a class="back" href="/roundhere-support/">← Round Here Support</a>
+    <div class="icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 19.8h.1L12 16l9.9 3.8h.1L12 2z"/></svg>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: April 2026</p>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p>Round Here is a place discovery app for iPhone. We take your privacy seriously. This policy explains exactly what data is collected, why, and how it is used. Round Here does not require an account, does not sell your data, and does not use it for advertising.</p>
+  </section>
+
+  <section>
+    <h2>Location Data</h2>
+    <h3>When In Use (foreground)</h3>
+    <p>Round Here uses your device's precise location to show places near you and to provide turn-by-turn walking and driving directions. This location is sent to the Google Places API solely to retrieve nearby search results.</p>
+    <h3>Always On (background)</h3>
+    <p>If you create a Smart Alert, Round Here requests "Always On" location access so it can notify you when you enter a proximity zone. Background location is used only for geofence monitoring and is never transmitted to any server. You can revoke this permission at any time in iOS Settings — alerts will stop firing but all other app features continue to work.</p>
+    <p>Location data is processed on-device and via Google Places API. It is not stored on our servers, not linked to your identity, and not shared with any third parties beyond what is necessary to run the place search.</p>
+  </section>
+
+  <section>
+    <h2>Google Places API</h2>
+    <p>Place search results, photos, opening hours, and reviews are powered by the Google Places API. When you search, your approximate location and search query are sent to Google to retrieve results. Google's own privacy policy applies to this data: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+  </section>
+
+  <section>
+    <h2>AI Search (Round Here+ feature)</h2>
+    <p>If you use AI Search, your natural-language query (e.g. "good vibes bar") is sent to a Round Here backend (Cloudflare Worker) which uses the Claude AI API to resolve it into place types. Queries are not stored and are not linked to your identity. This feature is only active when you explicitly submit a search query using AI Search.</p>
+  </section>
+
+  <section>
+    <h2>Analytics</h2>
+    <p>The app collects anonymous usage events to help improve the product — for example, which categories are searched, whether an alert was created, or whether the paywall was viewed. These events:</p>
+    <ul>
+      <li>Contain no personally identifiable information</li>
+      <li>Contain no location data</li>
+      <li>Are linked to a randomly generated device identifier (UUID), not to your name, email, or Apple ID</li>
+      <li>Are processed by PostHog on EU servers</li>
+    </ul>
+    <p>You can opt out at any time in the app under Settings → Privacy → Share usage data.</p>
+  </section>
+
+  <section>
+    <h2>Data Storage</h2>
+    <p>Your saved places, categories, search history, and alert configurations are stored locally on your device. If you are signed into iCloud, this data is synced across your Apple devices via iCloud Key-Value Storage. We do not have access to your iCloud data.</p>
+    <p>No user data is stored on Round Here's servers.</p>
+  </section>
+
+  <section>
+    <h2>Subscriptions</h2>
+    <p>Round Here+ subscriptions are processed entirely by Apple via the App Store. We do not receive or store your payment information. Subscription management is handled through your Apple ID.</p>
+  </section>
+
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>Round Here is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+  </section>
+
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy as the app evolves. The "Last updated" date at the top will reflect any changes. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>For privacy questions or requests: <a href="mailto:dinusappleid@gmail.com">dinusappleid@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>
+      <a href="/roundhere-support/">Round Here Support</a> &nbsp;·&nbsp;
+      <a href="/roundhere-support/terms">Terms of Use</a> &nbsp;·&nbsp;
+      <a href="mailto:dinusappleid@gmail.com">Contact</a>
+    </p>
+    <p style="margin-top:8px;">© 2026 Round Here. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+</html>
